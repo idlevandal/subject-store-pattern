@@ -1,0 +1,11 @@
+<h3>Users</h3>
+
+<div *ngIf='(users$ | async) as users'>
+    <div *ngFor='let user of users' class="card mb-2 card-shadow" style="width: 30rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{user.name}}</h5>
+          <p class="card-text">{{user.company.catchPhrase}}</p>
+          <a href="#" class="btn btn-primary">{{user.email}}</a>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'subject-store-pattern';
+
+  constructor(private userService: UserService) {}
+  
+  
+  ngOnInit():  void {
+    this.userService.init();
+  }
 }
